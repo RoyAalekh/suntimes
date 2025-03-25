@@ -1,14 +1,7 @@
 # 🌅 Sunrise & Sunset Finder
 
 > A sleek web app to find accurate sunrise and sunset times for any location and date — with timezone awareness, interactive map support, and a beautiful dark/light theme toggle.  
-> 💡 Built for both **end users** and **developers**.
-
----
-
-## 🚀 Live Demo
-
-🌍 Try it live:  
-**[sunrisesunset.pythonanywhere.com](https://AalekhRoy.pythonanywhere.com)**  
+> 💡 Built for both **end users** and **developers**. 
 
 ---
 
