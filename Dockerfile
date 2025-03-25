@@ -1,22 +1,21 @@
-# Use lightweight Python image
 FROM python:3.10-slim
 
-# Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Create working directory
 WORKDIR /app
 
-# Install dependencies
-COPY pyproject.toml .
-RUN pip install --upgrade pip && pip install --no-cache-dir uv
+# Install uv
+RUN pip install --upgrade pip && pip install uv
 
-# Copy the app source
+# Copy files
 COPY . .
 
-# Expose port
+# Install with uv system mode
+RUN uv pip install --system -r requirements.txt
+
 EXPOSE 5000
 
-# Run the app with uvicorn (or use gunicorn if preferred)
-CMD ["uv", "pip", "install", "-r", "requirements.txt"] && uvicorn main:app --host 0.0.0.0 --port 5000
+
+# Run the app
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"]

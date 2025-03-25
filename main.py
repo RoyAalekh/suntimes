@@ -2,7 +2,6 @@ import os
 from app.app import app
 
 if __name__ == "__main__":
-    # Use environment variables for better security
     debug_mode = os.environ.get("DEBUG", "False").lower() == "true"
     port = int(os.environ.get("PORT", 5000))
     
