@@ -1,0 +1,16 @@
+[project]
+name = "suntimes"
+version = "1.0.0"
+description = "A web app to find accurate sunrise and sunset times for any location and date."
+requires-python = ">=3.10"
+dependencies = [
+    "astral>=3.2",
+    "email-validator>=2.2.0",
+    "flask>=3.1.0",
+    "flask-sqlalchemy>=3.1.1",
+    "geopy>=2.4.1",
+    "gunicorn>=23.0.0",
+    "psycopg2-binary>=2.9.10",
+    "pytz>=2025.1",
+    "timezonefinder>=6.5.8",
+]
